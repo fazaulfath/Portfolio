@@ -1,0 +1,94 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.1",
+  "private": true,
+  "author": {
+    "name": "Sanidhya Kumar Verma",
+    "email": "sanidhya.verma12345@gmail.com",
+    "url": "https://github.com/sanidhyy"
+  },
+  "description": "Ethan Smith is a Full-stack web developer with 10+ years of experience.",
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "html",
+    "css",
+    "javascript",
+    "js",
+    "modern-ui",
+    "modern-ux",
+    "portfolio",
+    "framer-motion",
+    "3d-website",
+    "particle-effect"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/modern-portfolio.git"
+  },
+  "homepage": "https://github.com/sanidhyy/modern-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/modern-portfolio/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sanidhy"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/sanidhy"
+    }
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@next/font": "^13.4.4",
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.12",
+    "@remix-run/react": "^2.15.2",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.7",
+    "next": "^14.2.23",
+    "next-images": "^1.8.5",
+    "react": "^18.3.1",
+    "react-circular-progress": "^0.1.2",
+    "react-circular-progressbar": "^2.1.0",
+    "react-countup": "^6.4.2",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.15.1",
+    "react-scroll": "^1.9.0",
+    "react-spring": "^9.7.4",
+    "react-tsparticles": "^2.9.3",
+    "react-typed": "^2.0.12",
+    "react-typing-effect": "^2.0.5",
+    "swiper": "^11.1.14",
+    "tailwind-scrollbar": "^3.0.4",
+    "tailwindcss": "^3.4.17",
+    "three": "^0.172.0",
+    "three-stdlib": "^2.35.12",
+    "tsparticles": "^2.9.3"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "file-loader": "^6.2.0",
+    "postcss": "^8.5.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
