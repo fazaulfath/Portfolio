@@ -102,23 +102,6 @@ export const aboutData = [
       },
     ],
   },
-  // {
-  //   title: "credentials",
-  //   info: [
-  //     {
-  //       title: "Don Bosco Institute of Technology",
-  //       stage: "2025(expected)",
-  //     },
-  //     {
-  //       title: "RNS PU College",
-  //       stage: "2021",
-  //     },
-  //     {
-  //       title: "St. Anthony's Church School",
-  //       stage: "2019",
-  //     },
-  //   ],
-  // },
 ];
 
 const About = () => {

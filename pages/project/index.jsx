@@ -181,7 +181,7 @@ const Projects = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             className="text-lg mt-4 mb-12"
           >
-            Here are the things I've worked on
+            Here are the things I have worked on
           </motion.p>
           <div className="flex xl:hidden relative">
             <ProjectsBtn />
