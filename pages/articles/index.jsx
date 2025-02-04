@@ -16,7 +16,7 @@ const Articles = () => {
             <div className="w-full bg-gray-900 rounded-lg p-6 font-mono border border-gray-700">
               <div className="flex items-center space-x-2 text-blue-400 mb-4">
                 <span className="h-3 w-3 bg-blue-500 rounded-full animate-pulse" />
-                <span className="text-sm">articles.tsx</span>
+                <span className="text-sm">articles.jsx</span>
               </div>
               <div className="space-y-2 text-gray-300">
                 <p className="animate-typing">$ npm run generate-articles</p>
@@ -34,7 +34,7 @@ const Articles = () => {
                 Articles Coming Soon
               </h2>
               <p className="text-gray-400">
-                I'm busy writing and curating insightful articles.
+                I&apos;m busy writing and curating insightful articles.
                 <br />
                 Check back soon to read my latest thoughts!
               </p>
