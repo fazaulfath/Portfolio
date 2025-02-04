@@ -1,92 +1,57 @@
-import { motion } from "framer-motion";
-import { BsArrowRight } from "react-icons/bs";
-import { fadeIn } from "../../variants";
-
-const Contact = () => {
+const Articles = () => {
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text & form */}
-        <div className="flex flex-col w-full max-w-[700px]">
-          {/* text */}
-          <motion.h2
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h2 text-center mb-12"
-          >
-            Let&apos;s <span className="text-accent">connect.</span>
-          </motion.h2>
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+      <div className="relative border border-gray-700 rounded-lg bg-gray-800/50 p-8 max-w-2xl w-full shadow-2xl overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-shine" />
+          <div className="absolute -top-1/2 left-1/2 w-1/3 h-1/3 bg-blue-500/10 rounded-full animate-pulse" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+        </div>
 
-          {/* form */}
-          <motion.form
-            variants={fadeIn("up", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
-            method="POST"
-            action="https://formspree.io/f/mbldyekr"  // Replace with your actual Formspree endpoint
-          >
-            {/* Optional hidden input to set the email subject */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Contact Form Submission"
-            />
-
-            {/* input group */}
-            <div className="flex gap-x-6 w-full">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="input"
-                required
-                aria-required="true"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                className="input"
-                required
-                aria-required="true"
-              />
+        {/* Content */}
+        <div className="relative z-10">
+          <div className="flex flex-col items-center justify-center space-y-6">
+            {/* Terminal box */}
+            <div className="w-full bg-gray-900 rounded-lg p-6 font-mono border border-gray-700">
+              <div className="flex items-center space-x-2 text-blue-400 mb-4">
+                <span className="h-3 w-3 bg-blue-500 rounded-full animate-pulse" />
+                <span className="text-sm">articles.tsx</span>
+              </div>
+              <div className="space-y-2 text-gray-300">
+                <p className="animate-typing">$ npm run generate-articles</p>
+                <p className="text-yellow-400 animate-typing-delay-1">// Compiling my latest musings...</p>
+                <p className="text-green-400 animate-typing-delay-2">✓ Articles successfully compiled</p>
+                <p className="text-purple-400 animate-typing-delay-3">
+                  &gt; Launching articles module {/* Fixed the > character */}
+                </p>
+              </div>
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              className="input"
-              required
-              aria-required="true"
-            />
-            <textarea
-              name="message"
-              placeholder="Message..."
-              className="textarea"
-              required
-              aria-required="true"
-            />
-            <button
-              type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
-            >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let&apos;s talk
-              </span>
-              <BsArrowRight
-                className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                aria-hidden="true"
-              />
-            </button>
-          </motion.form>
+
+            {/* Coming Soon text */}
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient-x">
+                Articles Coming Soon
+              </h2>
+              <p className="text-gray-400">
+                I'm busy writing and curating insightful articles.
+                <br />
+                Check back soon to read my latest thoughts!
+              </p>
+            </div>
+
+            {/* Progress indicators */}
+            <div className="flex space-x-4 items-center">
+              <div className="h-2 w-24 bg-gray-700 rounded-full overflow-hidden">
+                <div className="h-full bg-blue-500 w-1/3 animate-progress" />
+              </div>
+              <span className="text-blue-400 text-sm font-mono">LOADING... 67%</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default Articles;
