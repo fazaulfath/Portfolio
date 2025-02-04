@@ -23,7 +23,7 @@ const Articles = () => {
                 <p className="text-yellow-400 animate-typing-delay-1">// Compiling my latest musings...</p>
                 <p className="text-green-400 animate-typing-delay-2">✓ Articles successfully compiled</p>
                 <p className="text-purple-400 animate-typing-delay-3">
-                  &gt; Launching articles module {/* Fixed the > character */}
+                  &gt; Launching articles module
                 </p>
               </div>
             </div>
