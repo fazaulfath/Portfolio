@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 import Layout from "../components/Layout";
-import Transition from "../components/transition";
+import Transition from "../components/Transition";
 import CursorEffect from "../components/Cursor";
 import "../styles/globals.css";
 
