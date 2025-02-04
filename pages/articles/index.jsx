@@ -20,7 +20,7 @@ const Articles = () => {
               </div>
               <div className="space-y-2 text-gray-300">
                 <p className="animate-typing">$ npm run generate-articles</p>
-                <p className="text-yellow-400 animate-typing-delay-1">// Compiling my latest musings...</p>
+                <p className="text-yellow-400 animate-typing-delay-1"> Compiling my latest musings...</p>
                 <p className="text-green-400 animate-typing-delay-2">✓ Articles successfully compiled</p>
                 <p className="text-purple-400 animate-typing-delay-3">
                   &gt; Launching articles module
