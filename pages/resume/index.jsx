@@ -22,7 +22,7 @@ const Resume = () => {
           date: "2021",
         },
         {
-          title: "St. Anthony's Church School",
+          title: "St. Anthony&apos;s Church School",
           description: "SSC",
           date: "2019",
         },
