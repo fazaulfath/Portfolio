@@ -5,25 +5,32 @@ import ProjectsBtn from "../../components/ProjectsBtn";
 import { fadeIn } from "../../variants";
 import { PlusIcon } from '@heroicons/react/24/solid';
 
-// Add an `isClicked` property, an extraDescription property, and a technologies property
+// Updated project objects with viewProjectUrl and sourceCodeUrl.
+// For projects that should not display a "Visit Website" button,
+// simply set viewProjectUrl to an empty string or omit it.
 const initialProjects = [
   {
     id: 1,
     name: "Convoy",
     description: "I built",
-    extraDescription: "Convoy is a cutting-edge logistics platform that revolutionizes fleet management.",
+    extraDescription: "A web platform for booking luxury cruises, featuring destination exploration, package selection, and user inquiries.",
     images: ["convoy.png"],
     isClicked: false,
     technologies: ["React", "Node.js", "MongoDB", "AWS"],
+    viewProjectUrl: "https://convoyy.netlify.app/",
+    sourceCodeUrl: "https://github.com/fazaulfath/Convoy",
   },
   {
     id: 2,
     name: "SymptoSphere",
     description: "I designed and developed",
-    extraDescription: "SymptoSphere is an innovative health diagnostic tool leveraging modern UI design.",
+    extraDescription: "A Flask web app for disease prediction using ML and DL models, achieving up to 99% accuracy.",
     images: ["disease1.png"],
     isClicked: false,
     technologies: ["Vue.js", "Python", "Flask", "Docker"],
+    // For this project, let's assume you only want the source code button.
+    viewProjectUrl: "", // Or you can simply remove this property.
+    sourceCodeUrl: "https://github.com/fazaulfath/SymptoSphere",
   },
   {
     id: 3,
@@ -33,15 +40,19 @@ const initialProjects = [
     images: ["park.png"],
     isClicked: false,
     technologies: ["React Native", "Firebase", "Arduino", "Raspberry Pi"],
+    viewProjectUrl: "",
+    sourceCodeUrl: "https://github.com/fazaulfath/Smart-Parking-System",
   },
   {
     id: 4,
     name: "NewsNab",
     description: "I had a hand in",
-    extraDescription: "NewsNab curates personalized news feeds powered by AI-driven algorithms.",
+    extraDescription: "A web app that aggregates news using Scrapy for scraping, Pandas for data processing, and Streamlit for the interface.",
     images: ["News1.png"],
     isClicked: false,
     technologies: ["Angular", "Django", "PostgreSQL", "TensorFlow"],
+    viewProjectUrl: "https://newsnab.streamlit.app/",
+    sourceCodeUrl: "https://github.com/fazaulfath/NewsNab",
   },
 ];
 
@@ -315,10 +326,10 @@ const Projects = () => {
               </motion.h2>
             </motion.div>
 
-            {/* NEW: Extra description and animated buttons that drop in from above once the project is clicked */}
+            {/* Extra description and animated buttons that drop in once the project is clicked */}
             {projects[currentProject].isClicked && (
               <>
-                {/* Extra description above the buttons */}
+                {/* Extra description */}
                 <motion.p
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -336,22 +347,26 @@ const Projects = () => {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="flex flex-row gap-3 justify-left"
                 >
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-fit px-6 py-3 border border-[#f13024] bg-transparent text-white rounded-full transition-colors"
-                  >
-                    Visit Website
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-fit px-6 py-3 border border-[#f13024] bg-transparent text-white rounded-full transition-colors"
-                  >
-                    Source Code
-                  </a>
+                  {projects[currentProject].viewProjectUrl && projects[currentProject].viewProjectUrl.trim() !== "" && (
+                    <a
+                      href={projects[currentProject].viewProjectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-fit px-6 py-3 border border-[#f13024] bg-transparent text-white rounded-full transition-colors"
+                    >
+                      Visit Website
+                    </a>
+                  )}
+                  {projects[currentProject].sourceCodeUrl && projects[currentProject].sourceCodeUrl.trim() !== "" && (
+                    <a
+                      href={projects[currentProject].sourceCodeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-fit px-6 py-3 border border-[#f13024] bg-transparent text-white rounded-full transition-colors"
+                    >
+                      Source Code
+                    </a>
+                  )}
                 </motion.div>
 
                 {/* Grey line */}
@@ -367,7 +382,7 @@ const Projects = () => {
                   Technologies:
                 </motion.h3>
 
-                {/* Technologies buttons */}
+                {/* Technologies list */}
                 <motion.div
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
