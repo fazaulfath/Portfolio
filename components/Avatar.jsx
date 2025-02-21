@@ -6,8 +6,8 @@ const Avatar = () => {
       <Image
         src="/avatar.png"
         alt="avatar"
-        width={700}
-        height={560}
+        width={1499}
+        height={1206}
         quality={100}
         className="translate-z-0 w-full h-full"
         loading="eager"
